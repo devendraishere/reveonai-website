@@ -17,20 +17,20 @@
   <header class="header">
     <div class="wrap">
       <nav class="nav" id="nav">
-        <a href="#top" class="brand" aria-label="ReveonAI home">
+        <a href="index.html#top" class="brand" aria-label="ReveonAI home">
           <img class="brand__icon" src="assets/logoicon-white.svg" alt="" aria-hidden="true" />
           <span class="brand__word">reveon<span class="brand__ai">.ai</span></span>
         </a>
         <ul class="nav__menu">
-          <li><a href="#platform">Platform</a></li>
-          <li><a href="#usecases">Solutions</a></li>
-          <li><a href="#approach">Why ReveonAI</a></li>
-          <li><a href="#insights">Resources</a></li>
-          <li><a href="#operators">Company</a></li>
+          <li><a href="index.html#platform">Platform</a></li>
+          <li><a href="index.html#usecases">Solutions</a></li>
+          <li><a href="index.html#approach">Why ReveonAI</a></li>
+          <li><a href="trust.html">Trust &amp; Security</a></li>
+          <li><a href="index.html#insights">Resources</a></li>
         </ul>
         <div class="nav__right">
-          <a href="#" class="nav__login">Login</a>
-          <a href="#demo" class="btn btn--primary">Book a demo</a>
+          <a href="trust.html" class="nav__login">Trust</a>
+          <a href="index.html#demo" class="btn btn--primary">Book a demo</a>
         </div>
         <button class="nav__toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
           <span></span><span></span><span></span>
@@ -44,34 +44,60 @@
     <!-- ============ 1. HERO ============ -->
     <section class="hero" id="top">
       <div class="wrap">
-        <div class="hero__inner">
-          <span class="hero__pill"><span class="dot"></span> Expert-led AI for pharma quality &amp; manufacturing</span>
-          <h1>Move faster. Work smarter. Stay compliant.<br /><span class="accent">Without ever losing human control.</span></h1>
-          <p class="hero__sub">GMP-native AI for the Quality, Manufacturing, and Compliance teams who keep regulated medicine moving — built by people who have lived GMP, not just learned it.</p>
-          <div class="hero__cta">
-            <a href="#demo" class="btn btn--primary btn--lg">Book a demo <svg class="arr" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-            <a href="#how" class="btn btn--ghost btn--lg">See how it works</a>
-          </div>
-
-          <div class="hero__selector">
-            <p class="hero__selector-label">Where does it hurt most?</p>
-            <div class="chips">
-              <a class="chip" href="#usecases"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3 8-8"/><path d="M20 12v6a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h9"/></svg> Deviation &amp; CAPA</a>
-              <a class="chip" href="#usecases"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg> Audit readiness</a>
-              <a class="chip" href="#usecases"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M7 9h10M7 13h6"/></svg> Batch release</a>
-              <a class="chip" href="#usecases"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/></svg> SOP &amp; document control</a>
-              <a class="chip" href="#usecases"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4z"/></svg> Regulatory response</a>
+        <div class="hero__grid">
+          <div class="hero__col">
+            <span class="hero__pill"><span class="dot"></span> The agentic AI platform for pharma quality &amp; manufacturing</span>
+            <h1>Configure AI agents for <span class="accent">any</span> GMP workflow.</h1>
+            <p class="hero__sub">ReveonAI is the GMP-native platform where Quality and Manufacturing teams build and run human-in-the-loop AI agents for any use case — deviations, audits, batch review, SOPs, regulatory response — with an expert in control of every output.</p>
+            <div class="hero__cta">
+              <a href="#demo" class="btn btn--primary btn--lg">Book a demo <svg class="arr" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+              <a href="#how" class="btn btn--ghost btn--lg">See how it works</a>
+            </div>
+            <div class="hero__selector">
+              <p class="hero__selector-label">One platform · any use case</p>
+              <div class="chips">
+                <a class="chip" href="#usecases"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3 8-8"/><path d="M20 12v6a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h9"/></svg> Deviation &amp; CAPA</a>
+                <a class="chip" href="#usecases"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg> Audit readiness</a>
+                <a class="chip" href="#usecases"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M7 9h10M7 13h6"/></svg> Batch release</a>
+                <a class="chip" href="#usecases"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/></svg> SOP control</a>
+                <a class="chip" href="#usecases"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4z"/></svg> Regulatory response</a>
+                <span class="chip chip--more">+ your workflow</span>
+              </div>
             </div>
           </div>
 
-          <div class="hero__trust">
-            <p>In production with pharma manufacturers across the US, Europe &amp; India</p>
-            <div class="trust-logos">
-              <span class="trust-badge"><span class="b-dot"></span> US CDMOs</span>
-              <span class="trust-badge"><span class="b-dot"></span> European contract testing labs</span>
-              <span class="trust-badge"><span class="b-dot"></span> India manufacturing sites</span>
-              <span class="trust-badge"><span class="b-dot"></span> USFDA &amp; EMA-regulated</span>
+          <div class="hero__visual" aria-hidden="true">
+            <div class="wf">
+              <div class="wf__bar"><span class="wf__dot"></span><span class="wf__dot"></span><span class="wf__dot"></span><span class="wf__title">ReveonAI · Workflow Studio</span></div>
+              <div class="wf__body">
+                <div class="wf__field">
+                  <span class="wf__label">Use case</span>
+                  <div class="wf__select">Deviation Investigation <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></div>
+                </div>
+                <div class="wf__pipe">
+                  <div class="wf__step"><span class="wf__si"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="M7 10l5 5 5-5M12 15V3"/></svg></span> Ingest sources <span class="wf__agent">agent</span></div>
+                  <div class="wf__step"><span class="wf__si"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4z"/></svg></span> Draft investigation <span class="wf__agent">agent</span></div>
+                  <div class="wf__step"><span class="wf__si"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><path d="M12 9v4M12 17h.01"/></svg></span> Flag gaps &amp; risks <span class="wf__agent">agent</span></div>
+                  <div class="wf__step wf__step--human"><span class="wf__si"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg></span> Expert review <span class="wf__toggle"><span class="wf__knob"></span></span><span class="wf__req">required</span></div>
+                  <div class="wf__step wf__step--out"><span class="wf__si"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span> Defensible, audit-trailed output</div>
+                </div>
+                <div class="wf__foot">
+                  <span class="wf__chip">Agentic</span>
+                  <span class="wf__chip">Human-in-the-loop</span>
+                  <span class="wf__chip">Audit-trailed</span>
+                </div>
+              </div>
             </div>
+          </div>
+        </div>
+
+        <div class="hero__trust">
+          <p>In production with pharma manufacturers across the US, Europe &amp; India</p>
+          <div class="trust-logos">
+            <span class="trust-badge"><span class="b-dot"></span> US CDMOs</span>
+            <span class="trust-badge"><span class="b-dot"></span> European contract testing labs</span>
+            <span class="trust-badge"><span class="b-dot"></span> India manufacturing sites</span>
+            <span class="trust-badge"><span class="b-dot"></span> USFDA &amp; EMA-regulated</span>
           </div>
         </div>
       </div>
@@ -138,8 +164,8 @@
       <div class="wrap">
         <div class="section-head reveal">
           <span class="h-eyebrow">The platform</span>
-          <h2>One platform, across quality and manufacturing</h2>
-          <p>Six purpose-built AI agents for the workflows where GMP teams lose the most time — each configurable, each human-in-the-loop.</p>
+          <h2>Pre-built agents, or configure your own</h2>
+          <p>Start with proven AI agents for the workflows where GMP teams lose the most time — then configure agents for any other use case in your quality or manufacturing operation. Every agent is human-in-the-loop and audit-trailed by default.</p>
         </div>
 
         <div class="prod-grid">
@@ -147,37 +173,37 @@
             <div class="prod-card__ico"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg></div>
             <h3>InvestigationAssist</h3>
             <p>Defensible deviation and CAPA investigations, drafted in a fraction of the time — root cause your auditors can stand behind.</p>
-            <a class="textlink" href="#">Explore <svg class="arr" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+            <a class="textlink" href="#usecases">Explore <svg class="arr" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
           </article>
           <article class="prod-card reveal d1">
             <div class="prod-card__ico"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg></div>
             <h3>AuditSure</h3>
             <p>Walk into every inspection ready. Continuous audit-readiness, gap detection, and mock-audit support against current expectations.</p>
-            <a class="textlink" href="#">Explore <svg class="arr" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+            <a class="textlink" href="#usecases">Explore <svg class="arr" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
           </article>
           <article class="prod-card reveal d2">
             <div class="prod-card__ico"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4z"/></svg></div>
             <h3>ResponseDraft</h3>
             <p>Turn a 483 or audit observation into a structured, evidence-linked response — defensible drafts in hours, not weeks.</p>
-            <a class="textlink" href="#">Explore <svg class="arr" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+            <a class="textlink" href="#usecases">Explore <svg class="arr" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
           </article>
           <article class="prod-card reveal">
             <div class="prod-card__ico"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M9 14l2 2 4-4"/></svg></div>
             <h3>DocReview.AI</h3>
             <p>Review SOPs, BMRs, and protocols at machine speed. Catch errors, gaps, and inconsistencies before QA ever does.</p>
-            <a class="textlink" href="#">Explore <svg class="arr" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+            <a class="textlink" href="#usecases">Explore <svg class="arr" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
           </article>
           <article class="prod-card reveal d1">
             <div class="prod-card__ico"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M7 9h10M7 13h6"/><path d="M16 13l2 2 3-3"/></svg></div>
             <h3>BatchReview+</h3>
             <p>Review the exceptions, not every page. AI reads the full batch record and surfaces only what needs a human decision.</p>
-            <a class="textlink" href="#">Explore <svg class="arr" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+            <a class="textlink" href="#usecases">Explore <svg class="arr" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
           </article>
           <article class="prod-card reveal d2">
             <div class="prod-card__ico"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></div>
             <h3>SOPComply+</h3>
             <p>Harmonize, simplify, and re-write SOPs at scale — with QMS gap assessment that keeps your document set inspection-ready.</p>
-            <a class="textlink" href="#">Explore <svg class="arr" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+            <a class="textlink" href="#usecases">Explore <svg class="arr" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
           </article>
         </div>
         <p class="prod-tagline lead reveal">Plus expert <strong>GMP consulting</strong> and <strong>AI skilling</strong> — so adoption is safe, practical, and owned by your team.</p>
@@ -207,7 +233,7 @@
               <p class="who">For Quality / QA</p>
               <h3>Clear the deviation &amp; CAPA backlog</h3>
               <p>Stop losing days to drafting reports. Get a strong, structured first draft with the right questions asked up front — so investigations close faster and read consistently, every time.</p>
-              <a class="btn btn--ghost-dark" href="#">Deviation &amp; CAPA solution <svg class="arr" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+              <a class="btn btn--ghost-dark" href="#demo">Deviation &amp; CAPA solution <svg class="arr" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
             </div>
             <div class="tab-visual">
               <div class="tv-head">InvestigationAssist · Workflow</div>
@@ -223,7 +249,7 @@
               <p class="who">For Regulatory / Compliance</p>
               <h3>Be inspection-ready, continuously</h3>
               <p>Don't scramble before an audit. Continuously surface gaps against current expectations, run mock audits, and keep your evidence organized — so the inspector's questions are ones you've already answered.</p>
-              <a class="btn btn--ghost-dark" href="#">Audit readiness solution <svg class="arr" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+              <a class="btn btn--ghost-dark" href="#demo">Audit readiness solution <svg class="arr" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
             </div>
             <div class="tab-visual">
               <div class="tv-head">AuditSure · Coverage</div>
@@ -239,7 +265,7 @@
               <p class="who">For Manufacturing / Ops</p>
               <h3>Release faster, right first time</h3>
               <p>Batch review is where releases stall. Let AI read the full record and surface only the exceptions, so reviewers spend their time on judgment — not on turning every page.</p>
-              <a class="btn btn--ghost-dark" href="#">Batch release solution <svg class="arr" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+              <a class="btn btn--ghost-dark" href="#demo">Batch release solution <svg class="arr" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
             </div>
             <div class="tab-visual">
               <div class="tv-head">BatchReview+ · Review by exception</div>
@@ -255,7 +281,7 @@
               <p class="who">For Quality &amp; Document Control</p>
               <h3>Tame the SOP &amp; document set</h3>
               <p>Harmonize, simplify, and re-write procedures at scale, with QMS gap assessment built in. Catch document errors before they become audit observations.</p>
-              <a class="btn btn--ghost-dark" href="#">SOP &amp; document control <svg class="arr" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+              <a class="btn btn--ghost-dark" href="#demo">SOP &amp; document control <svg class="arr" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
             </div>
             <div class="tab-visual">
               <div class="tv-head">SOPComply+ &amp; DocReview.AI</div>
@@ -271,7 +297,7 @@
               <p class="who">For Regulatory Affairs</p>
               <h3>Write responses regulators respect</h3>
               <p>From observation to evidence-linked response — structured, complete, and traceable. The first draft that would have taken a week is ready for expert review the same day.</p>
-              <a class="btn btn--ghost-dark" href="#">Regulatory response solution <svg class="arr" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+              <a class="btn btn--ghost-dark" href="#demo">Regulatory response solution <svg class="arr" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
             </div>
             <div class="tab-visual">
               <div class="tv-head">ResponseDraft · 483 / observation</div>
@@ -386,8 +412,8 @@
           </div>
           <div class="sec-card reveal d1">
             <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
-            <h3>Data handling</h3>
-            <p>Flexible deployment and data residency options, with a data-minimization approach by design.</p>
+            <h3>Your data stays yours</h3>
+            <p>Your documents are never used to train shared models. Flexible deployment, data residency, and a patent-pending data-minimization approach by design.</p>
           </div>
           <div class="sec-card reveal d2">
             <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
@@ -400,7 +426,7 @@
             <p>Human-in-the-loop on every output, with guardrails that curb hallucination.</p>
           </div>
         </div>
-        <div class="reveal" style="margin-top:36px"><a class="textlink" href="#">Read the full Security &amp; Compliance overview <svg class="arr" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+        <div class="reveal" style="margin-top:36px"><a class="textlink" href="trust.html">Read the full Trust &amp; Security overview <svg class="arr" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
       </div>
     </section>
 
@@ -458,7 +484,7 @@
             <div class="insight-card__body">
               <div class="kicker">Guide · AI in GMP</div>
               <h3>Human-in-the-loop AI in pharma quality, explained</h3>
-              <a class="textlink" href="#">Read the guide <svg class="arr" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+              <a class="textlink" href="#faq">Read the guide <svg class="arr" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
             </div>
           </article>
           <article class="insight-card reveal d1">
@@ -466,7 +492,7 @@
             <div class="insight-card__body">
               <div class="kicker">Playbook · Deviations</div>
               <h3>Reducing deviation investigation time without cutting corners</h3>
-              <a class="textlink" href="#">Read the playbook <svg class="arr" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+              <a class="textlink" href="#faq">Read the playbook <svg class="arr" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
             </div>
           </article>
           <article class="insight-card reveal d2">
@@ -474,9 +500,46 @@
             <div class="insight-card__body">
               <div class="kicker">Perspective · Data integrity</div>
               <h3>Validating AI output in a GMP environment: ALCOA+ still applies</h3>
-              <a class="textlink" href="#">Read the perspective <svg class="arr" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+              <a class="textlink" href="#faq">Read the perspective <svg class="arr" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
             </div>
           </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 13b. FAQ ============ -->
+    <section id="faq">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <span class="h-eyebrow">The questions QA &amp; IT ask first</span>
+          <h2>Straight answers, before you book a demo</h2>
+          <p>The objections we hear in every serious conversation — answered plainly. More detail lives on the <a class="textlink" href="trust.html">Trust &amp; Security page</a>.</p>
+        </div>
+        <div class="faq reveal">
+          <details class="faq__item" open>
+            <summary>Can your AI hallucinate and produce a wrong investigation or root cause?<span class="faq__plus" aria-hidden="true"></span></summary>
+            <div class="faq__a"><p>No output is released by the AI alone — a qualified human reviews, edits, and signs every result, so a person is always accountable for what's used. To reduce the risk at the source, we use a patent-pending data-minimization technique that constrains the model to your provided evidence rather than open-ended generation, and every claim is traceable back to its source. The AI produces a structured first draft; your expert makes the call.</p></div>
+          </details>
+          <details class="faq__item">
+            <summary>Is our data used to train your models?<span class="faq__plus" aria-hidden="true"></span></summary>
+            <div class="faq__a"><p>No. Your documents and data are never used to train shared or third-party models. We operate on a data-minimization principle, support flexible deployment and data-residency options, and can align retention and access controls to your policies. Details and configuration options are on the <a class="textlink" href="trust.html">Trust &amp; Security page</a>.</p></div>
+          </details>
+          <details class="faq__item">
+            <summary>How does this fit our validation (CSV/CSA) and 21 CFR Part 11 obligations?<span class="faq__plus" aria-hidden="true"></span></summary>
+            <div class="faq__a"><p>ReveonAI is designed to fit a risk-based CSV/CSA approach. Every AI suggestion and human action is captured in an attributable, time-stamped audit trail, outputs are reviewable and traceable, and we provide documentation to support your IQ/OQ/PQ and validation effort. The human-in-the-loop design keeps a qualified reviewer accountable for each record.</p></div>
+          </details>
+          <details class="faq__item">
+            <summary>Does it integrate with our existing QMS?<span class="faq__plus" aria-hidden="true"></span></summary>
+            <div class="faq__a"><p>Yes — ReveonAI is built to work alongside your existing QMS, not replace it. There's no rip-and-replace: you bring in the documents and history a workflow needs, and the reviewed output flows back into your system of record. Integration scope is agreed per deployment.</p></div>
+          </details>
+          <details class="faq__item">
+            <summary>How do we start — and what does it cost?<span class="faq__plus" aria-hidden="true"></span></summary>
+            <div class="faq__a"><p>Most teams start with a focused, time-boxed pilot on a real workflow — for example, your recent deviations — so you can measure the impact on your own data before any broader commitment. Pricing is scoped to the workflows and scale you need. <a class="textlink" href="#demo">Talk to us</a> and we'll propose a pilot.</p></div>
+          </details>
+          <details class="faq__item">
+            <summary>What can ReveonAI not do today?<span class="faq__plus" aria-hidden="true"></span></summary>
+            <div class="faq__a"><p>We're honest about boundaries: our agents are configured to your workflows rather than fully plug-and-play on day one, and some integrations are scoped per engagement. We'd rather set expectations correctly in a pilot than oversell — that's the fastest path to a deployment your QA and IT teams will actually approve.</p></div>
+          </details>
         </div>
       </div>
     </section>
@@ -488,8 +551,8 @@
         <h2>See it on your own workflow</h2>
         <p>Bring a real deviation, a recent observation, or a batch record. We'll show you defensible output — with your expert in control the whole way.</p>
         <div class="hero__cta">
-          <a href="#" class="btn btn--primary btn--lg">Book a demo <svg class="arr" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-          <a href="#" class="btn btn--ghost btn--lg">Talk to our team</a>
+          <a href="mailto:hello@reveon.ai?subject=ReveonAI%20demo%20request" class="btn btn--primary btn--lg">Book a demo <svg class="arr" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          <a href="mailto:hello@reveon.ai?subject=ReveonAI%20enquiry" class="btn btn--ghost btn--lg">Talk to our team</a>
         </div>
       </div>
     </section>
@@ -501,7 +564,7 @@
     <div class="wrap">
       <div class="footer__top">
         <div class="footer__brand">
-          <a href="#top" class="brand flogo" aria-label="ReveonAI home">
+          <a href="index.html#top" class="brand flogo" aria-label="ReveonAI home">
             <img class="brand__icon" src="assets/logoicon-white.svg" alt="" aria-hidden="true" />
             <span class="brand__word">reveon<span class="brand__ai">.ai</span></span>
           </a>
@@ -510,45 +573,44 @@
         </div>
         <div class="footer__col">
           <h4>Platform</h4>
-          <a href="#">InvestigationAssist</a>
-          <a href="#">AuditSure</a>
-          <a href="#">ResponseDraft</a>
-          <a href="#">DocReview.AI</a>
-          <a href="#">BatchReview+</a>
-          <a href="#">SOPComply+</a>
+          <a href="index.html#platform">InvestigationAssist</a>
+          <a href="index.html#platform">AuditSure</a>
+          <a href="index.html#platform">ResponseDraft</a>
+          <a href="index.html#platform">DocReview.AI</a>
+          <a href="index.html#platform">BatchReview+</a>
+          <a href="index.html#platform">SOPComply+</a>
         </div>
         <div class="footer__col">
           <h4>Solutions</h4>
-          <a href="#">Deviation &amp; CAPA</a>
-          <a href="#">Audit readiness</a>
-          <a href="#">Batch release</a>
-          <a href="#">SOP &amp; document control</a>
-          <a href="#">Regulatory response</a>
+          <a href="index.html#usecases">Deviation &amp; CAPA</a>
+          <a href="index.html#usecases">Audit readiness</a>
+          <a href="index.html#usecases">Batch release</a>
+          <a href="index.html#usecases">SOP &amp; document control</a>
+          <a href="index.html#usecases">Regulatory response</a>
         </div>
         <div class="footer__col">
           <h4>Company</h4>
-          <a href="#">Why ReveonAI</a>
-          <a href="#">Security &amp; Trust</a>
-          <a href="#">Consulting &amp; Skilling</a>
-          <a href="#">About &amp; founders</a>
-          <a href="#">Contact</a>
+          <a href="index.html#approach">Why ReveonAI</a>
+          <a href="trust.html">Trust &amp; Security</a>
+          <a href="index.html#platform">Consulting &amp; Skilling</a>
+          <a href="index.html#operators">About &amp; founders</a>
+          <a href="mailto:hello@reveon.ai">Contact</a>
         </div>
         <div class="footer__col">
           <h4>Resources</h4>
-          <a href="#">Guides</a>
-          <a href="#">Case studies</a>
-          <a href="#">Blog</a>
-          <a href="#">Glossary</a>
-          <a href="#">Book a demo</a>
+          <a href="index.html#insights">Guides</a>
+          <a href="index.html#proof">Case studies</a>
+          <a href="index.html#faq">FAQ</a>
+          <a href="index.html#approach">How it works</a>
+          <a href="index.html#demo">Book a demo</a>
         </div>
       </div>
       <div class="footer__bottom">
         <span>© 2026 ReveonAI. All rights reserved.</span>
         <div class="legal">
-          <a href="#">Privacy</a>
-          <a href="#">Terms</a>
-          <a href="#">Accessibility</a>
-          <a href="#">Responsible AI</a>
+          <a href="trust.html">Trust &amp; Security</a>
+          <a href="trust.html#privacy">Privacy</a>
+          <a href="trust.html#responsible-ai">Responsible AI</a>
         </div>
       </div>
       <p class="footer__disclaimer">ReveonAI provides AI-assisted, expert-led tools; a qualified human reviews every output before use. Time-savings figures reflect targeted workflows and depend on adoption and process fit, validated in proof-of-concept. Human-in-the-loop is the AI approach regulators expect; it does not constitute regulatory endorsement. Customer outcomes are shown anonymized where required by agreement.</p>
