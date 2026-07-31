@@ -67,6 +67,55 @@
     document.querySelectorAll(".reveal").forEach(function (el) { io.observe(el); });
   }
 
+  /* ---------- Contact form ---------- */
+  var form = document.getElementById("contactForm");
+  if (form) {
+    var status = document.getElementById("cfStatus");
+    var submitBtn = form.querySelector(".cf__submit");
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      var fields = ["cf-name", "cf-email", "cf-subject", "cf-message"].map(function (id) { return document.getElementById(id); });
+      var invalid = false;
+      fields.forEach(function (f) {
+        var bad = !f.value.trim() || (f.type === "email" && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(f.value.trim()));
+        f.classList.toggle("cf--invalid", bad);
+        if (bad) invalid = true;
+      });
+      if (invalid) {
+        status.textContent = "Please fill in all fields with a valid email.";
+        status.className = "cf__status err";
+        return;
+      }
+      var btnHtml = submitBtn.innerHTML;
+      submitBtn.disabled = true;
+      submitBtn.textContent = "Sending…";
+      status.textContent = "";
+      status.className = "cf__status";
+      fetch("https://c25uqdd8of.execute-api.ap-south-1.amazonaws.com/dev/website/send-email", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name: fields[0].value.trim(),
+          email: fields[1].value.trim(),
+          subject: fields[2].value.trim(),
+          message: fields[3].value.trim(),
+          sitename: "ReveonAI"
+        })
+      }).then(function (res) {
+        if (!res.ok) throw new Error("send failed");
+        status.textContent = "Message sent — thank you. We'll get back to you soon.";
+        status.className = "cf__status ok";
+        form.reset();
+      }).catch(function () {
+        status.textContent = "Something went wrong. Please email contact@reveonai.com directly.";
+        status.className = "cf__status err";
+      }).finally(function () {
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = btnHtml;
+      });
+    });
+  }
+
   /* ---------- Header opacity on scroll ---------- */
   var header = document.querySelector(".header");
   if (header) {

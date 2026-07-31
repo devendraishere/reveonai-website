@@ -585,15 +585,54 @@
       </div>
     </section>
 
-    <!-- ============ 14. FINAL CTA ============ -->
-    <section class="final-cta section--deep" id="demo">
+    <!-- ============ 14. CONTACT / FINAL CTA ============ -->
+    <section class="section--deep anchor-offset" id="demo">
       <div class="wrap">
-        <span class="h-eyebrow">Move faster. Work smarter. Stay compliant.</span>
-        <h2>See it on your own workflow</h2>
-        <p>Bring a real deviation, a recent observation, or a batch record. We'll show you defensible output — with your expert in control the whole way.</p>
-        <div class="hero__cta">
-          <a href="mailto:contact@reveonai.com?subject=ReveonAI%20demo%20request" class="btn btn--primary btn--lg">Book a demo <svg class="arr" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-          <a href="mailto:contact@reveonai.com?subject=ReveonAI%20enquiry" class="btn btn--ghost btn--lg">Talk to our team</a>
+        <div class="contact" id="contact">
+          <div class="contact__info reveal">
+            <span class="h-eyebrow">Move faster. Work smarter. Stay compliant.</span>
+            <h2>See it on your own workflow</h2>
+            <p class="lead" style="color:rgba(255,255,255,.75);margin-top:18px">Bring a real deviation, a recent observation, or a batch record. We'll show you defensible output — with your expert in control the whole way.</p>
+            <ul class="contact__channels">
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 7l-10 6L2 7"/></svg>
+                <a href="mailto:contact@reveonai.com">contact@reveonai.com</a>
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                <span>US <a href="tel:+18042634961">+1 (804) 263-4961</a> · India <a href="tel:+919084373424">+91 90843 73424</a></span>
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+                <a href="https://www.linkedin.com/company/reveonai/" target="_blank" rel="noopener">linkedin.com/company/reveonai</a>
+              </li>
+            </ul>
+            <p style="margin-top:26px;font-size:.9rem;color:rgba(255,255,255,.55)">Prefer email? Every message lands with a person — a co-founder reads it, not a queue.</p>
+          </div>
+
+          <form class="contact__form reveal d1" id="contactForm" novalidate>
+            <h3>Send us a message</h3>
+            <div class="cf__row">
+              <div class="cf__field">
+                <label for="cf-name">Name<span aria-hidden="true">*</span></label>
+                <input type="text" id="cf-name" name="name" autocomplete="name" required />
+              </div>
+              <div class="cf__field">
+                <label for="cf-email">Work email<span aria-hidden="true">*</span></label>
+                <input type="email" id="cf-email" name="email" autocomplete="email" required />
+              </div>
+            </div>
+            <div class="cf__field">
+              <label for="cf-subject">Subject<span aria-hidden="true">*</span></label>
+              <input type="text" id="cf-subject" name="subject" placeholder="e.g. Demo request — deviation backlog" required />
+            </div>
+            <div class="cf__field">
+              <label for="cf-message">Message<span aria-hidden="true">*</span></label>
+              <textarea id="cf-message" name="message" rows="4" placeholder="Tell us about your workflow, team, or timeline…" required></textarea>
+            </div>
+            <button type="submit" class="btn btn--primary btn--lg cf__submit">Send message <svg class="arr" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+            <p class="cf__status" id="cfStatus" role="status" aria-live="polite"></p>
+          </form>
         </div>
       </div>
     </section>

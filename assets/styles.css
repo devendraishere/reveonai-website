@@ -524,6 +524,45 @@ section { padding-block: var(--section-y); position: relative; }
 .announce__link { color: var(--teal-bright); font-weight: 600; white-space: nowrap; }
 
 /* ============================================================
+   Contact section & form
+   ============================================================ */
+.contact { display: grid; grid-template-columns: 1fr 1.05fr; gap: clamp(36px, 5vw, 72px); align-items: start; }
+.contact__info h2 { font-size: clamp(2rem, 4vw, 3rem); }
+.contact__channels { margin-top: 30px; display: grid; gap: 16px; }
+.contact__channels li { display: flex; gap: 14px; align-items: flex-start; color: rgba(255,255,255,.85); }
+.contact__channels svg { width: 20px; height: 20px; stroke: var(--teal-bright); flex-shrink: 0; margin-top: 3px; }
+.contact__channels a { color: rgba(255,255,255,.9); font-weight: 500; }
+.contact__channels a:hover { color: var(--teal-bright); }
+.contact__form {
+  background: rgba(255,255,255,.05); border: 1px solid var(--line-dark); border-radius: var(--radius);
+  padding: 36px 34px; backdrop-filter: blur(6px);
+}
+.contact__form h3 { font-size: 1.4rem; color: #fff; margin-bottom: 22px; }
+.cf__row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.cf__field { margin-bottom: 16px; }
+.cf__field label { display: block; font-size: .84rem; font-weight: 600; color: rgba(255,255,255,.75); margin-bottom: 7px; }
+.cf__field label span { color: var(--teal-bright); margin-left: 2px; }
+.cf__field input, .cf__field textarea {
+  width: 100%; background: rgba(0,21,46,.55); border: 1px solid var(--line-dark); border-radius: 10px;
+  padding: 12px 14px; color: #fff; font-family: var(--font-body); font-size: .98rem;
+  transition: border-color .2s, box-shadow .2s; resize: vertical;
+}
+.cf__field input::placeholder, .cf__field textarea::placeholder { color: rgba(255,255,255,.35); }
+.cf__field input:focus, .cf__field textarea:focus {
+  outline: none; border-color: var(--teal); box-shadow: 0 0 0 3px rgba(0,166,166,.18);
+}
+.cf__field input.cf--invalid, .cf__field textarea.cf--invalid { border-color: #e5735c; }
+.cf__submit { width: 100%; justify-content: center; margin-top: 6px; }
+.cf__submit[disabled] { opacity: .6; cursor: wait; transform: none; }
+.cf__status { margin: 14px 0 0; font-size: .94rem; min-height: 1.4em; color: rgba(255,255,255,.75); }
+.cf__status.ok { color: #4fd97a; }
+.cf__status.err { color: #ff9c8a; }
+@media (max-width: 900px) {
+  .contact { grid-template-columns: 1fr; }
+  .cf__row { grid-template-columns: 1fr; }
+}
+
+/* ============================================================
    FAQ accordion
    ============================================================ */
 .faq { margin-top: 48px; max-width: 860px; }
