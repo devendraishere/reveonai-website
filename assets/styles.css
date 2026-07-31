@@ -121,7 +121,7 @@ section { padding-block: var(--section-y); position: relative; }
 }
 .nav { display: flex; align-items: center; gap: 32px; height: 76px; }
 .brand { display: inline-flex; align-items: center; gap: 9px; flex-shrink: 0; }
-.brand__icon { height: 34px; width: 34px; object-fit: contain; }
+.brand__icon { height: 42px; width: auto; object-fit: contain; }
 .brand__word { font-family: var(--font-display); font-size: 1.5rem; font-weight: 500; color: #fff; letter-spacing: -0.01em; line-height: 1; }
 .brand__ai { color: var(--teal-bright); }
 .nav__menu { display: flex; gap: 4px; margin-left: 8px; }
@@ -424,7 +424,7 @@ section { padding-block: var(--section-y); position: relative; }
 .footer { background: var(--navy-900); color: rgba(255,255,255,.7); padding-block: 72px 36px; }
 .footer__top { display: grid; grid-template-columns: 1.6fr repeat(4, 1fr); gap: 40px; }
 .footer__brand .flogo { margin-bottom: 22px; }
-.footer__brand .flogo .brand__icon { height: 30px; width: 30px; }
+.footer__brand .flogo .brand__icon { height: 36px; width: auto; }
 .footer__brand .flogo .brand__word { font-size: 1.35rem; }
 .footer__brand p { font-size: .95rem; max-width: 280px; color: rgba(255,255,255,.6); }
 .footer__brand .pos-line { color: var(--teal-bright); font-weight: 500; margin-top: 18px; font-size: .92rem; }
