@@ -440,27 +440,6 @@ section { padding-block: var(--section-y); position: relative; }
 .footer__disclaimer { margin-top: 22px; font-size: .78rem; color: rgba(255,255,255,.38); max-width: 880px; line-height: 1.6; }
 
 /* ============================================================
-   Product showcase (real screenshots)
-   ============================================================ */
-.showcase { display: grid; gap: clamp(52px, 6vw, 96px); margin-top: 60px; }
-.showcase__row { display: grid; grid-template-columns: 1.08fr 0.92fr; gap: clamp(32px, 5vw, 68px); align-items: center; }
-.showcase__media { order: 1; }
-.showcase__text { order: 2; }
-.showcase__row--rev .showcase__media { order: 2; }
-.showcase__row--rev .showcase__text { order: 1; }
-.frame {
-  border-radius: 14px; overflow: hidden; background: #fff;
-  border: 1px solid rgba(255,255,255,.14); box-shadow: 0 34px 80px rgba(0,0,0,.45);
-  transition: transform .4s var(--ease);
-}
-.frame img { display: block; width: 100%; height: auto; }
-.showcase__row:hover .frame { transform: translateY(-5px); }
-.showcase__text .kicker { display: block; font-size: .78rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--teal-bright); margin-bottom: 16px; }
-.showcase__text h3 { font-size: clamp(1.5rem, 2.7vw, 2.15rem); color: #fff; line-height: 1.12; margin-bottom: 16px; }
-.showcase__text p { color: rgba(255,255,255,.74); font-size: 1.08rem; margin: 0; }
-.showcase__note { margin-top: 40px; font-size: .82rem; color: rgba(255,255,255,.45); }
-
-/* ============================================================
    Inner page: hero banner, breadcrumb, callout, lists
    ============================================================ */
 .page-hero {
@@ -603,8 +582,6 @@ section { padding-block: var(--section-y); position: relative; }
    ============================================================ */
 @media (max-width: 1000px) {
   .hero__grid { grid-template-columns: 1fr; gap: 44px; }
-  .showcase__row { grid-template-columns: 1fr; gap: 30px; }
-  .showcase__row .showcase__media, .showcase__row .showcase__text { order: 0; }
   .hero__visual { max-width: 460px; }
   .wf { transform: none; }
   .prod-grid, .steps, .stats, .sec-grid { grid-template-columns: repeat(2, 1fr); }
