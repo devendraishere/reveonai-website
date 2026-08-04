@@ -77,13 +77,15 @@
       var fields = ["cf-name", "cf-email", "cf-subject", "cf-message"].map(function (id) { return document.getElementById(id); });
       var invalid = false;
       fields.forEach(function (f) {
+        if (!f.required) { f.classList.remove("cf--invalid"); return; }
         var bad = !f.value.trim() || (f.type === "email" && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(f.value.trim()));
         f.classList.toggle("cf--invalid", bad);
         if (bad) invalid = true;
       });
       if (invalid) {
-        status.textContent = "Please fill in all fields with a valid email.";
+        status.textContent = "Please add your name, a valid work email, and a short message.";
         status.className = "cf__status err";
+        form.querySelector(".cf--invalid") && form.querySelector(".cf--invalid").focus();
         return;
       }
       var btnHtml = submitBtn.innerHTML;
@@ -97,7 +99,7 @@
         body: JSON.stringify({
           name: fields[0].value.trim(),
           email: fields[1].value.trim(),
-          subject: fields[2].value.trim(),
+          subject: fields[2].value.trim() || "Website enquiry",
           message: fields[3].value.trim(),
           sitename: "ReveonAI"
         })
@@ -105,6 +107,9 @@
         if (!res.ok) throw new Error("send failed");
         status.textContent = "Message sent — thank you. We'll get back to you soon.";
         status.className = "cf__status ok";
+        if (typeof gtag === "function") {
+          gtag("event", "generate_lead", { form_name: "contact", page_location: location.href });
+        }
         form.reset();
       }).catch(function () {
         status.textContent = "Something went wrong. Please email contact@reveonai.com directly.";
@@ -115,6 +120,52 @@
       });
     });
   }
+
+
+  /* ---------- Campaign analytics: CTA, form-start, contact clicks ---------- */
+  (function () {
+    if (typeof gtag !== "function") return;
+    var started = false;
+    var cf = document.getElementById("contactForm");
+    if (cf) {
+      cf.addEventListener("focusin", function () {
+        if (started) return;
+        started = true;
+        gtag("event", "form_start", { form_name: "contact" });
+      });
+    }
+    document.addEventListener("click", function (e) {
+      var a = e.target.closest("a");
+      if (!a) return;
+      var href = a.getAttribute("href") || "";
+      if (a.dataset.cta) {
+        gtag("event", "cta_click", { cta_location: a.dataset.cta, link_text: a.innerText.trim().slice(0, 60) });
+      } else if (href.indexOf("mailto:") === 0) {
+        gtag("event", "contact_click", { method: "email" });
+      } else if (href.indexOf("tel:") === 0) {
+        gtag("event", "contact_click", { method: "phone" });
+      }
+    });
+  })();
+
+
+  /* ---------- Same-page anchor scroll, offset for the sticky header ---------- */
+  document.addEventListener("click", function (e) {
+    var a = e.target.closest('a[href^="#"]');
+    if (!a) return;
+    var id = a.getAttribute("href").slice(1);
+    if (!id) return;
+    var target = document.getElementById(id);
+    if (!target) return;
+    e.preventDefault();
+    var header = document.querySelector(".header");
+    var offset = (header ? header.getBoundingClientRect().height : 0) + 16;
+    var top = target.getBoundingClientRect().top + window.pageYOffset - offset + 1;
+    window.scrollTo({ top: top, behavior: reduce ? "auto" : "smooth" });
+    if (nav) { nav.classList.remove("open"); }
+    if (toggle) { toggle.setAttribute("aria-expanded", "false"); }
+    if (history.replaceState) { history.replaceState(null, "", "#" + id); }
+  });
 
   /* ---------- Header opacity on scroll ---------- */
   var header = document.querySelector(".header");

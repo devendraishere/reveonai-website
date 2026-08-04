@@ -98,7 +98,7 @@
 <body>
 
   <!-- ============ ANNOUNCEMENT ============ -->
-  <a class="announce" href="resources.html#events">Meet ReveonAI at the PDA India Chapter 2026 Annual Meeting · Hyderabad · Aug 3–5 &nbsp;<span class="announce__link">Details →</span></a>
+  <a class="announce" href="resources.html#events"><span class="announce__full">Meet ReveonAI at the PDA India Chapter 2026 Annual Meeting · Hyderabad · Aug 3–5</span><span class="announce__short">Meet us at PDA India 2026 · Hyderabad</span> &nbsp;<span class="announce__link">Details →</span></a>
 
   <!-- ============ HEADER ============ -->
   <header class="header">
@@ -116,7 +116,7 @@
           <li><a href="resources.html">Resources</a></li>
         </ul>
         <div class="nav__right">
-          <a href="index.html#demo" class="btn btn--primary">Book a demo</a>
+          <a href="#contactForm" class="btn btn--primary" data-cta="nav">Book a demo</a>
         </div>
         <button class="nav__toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
           <span></span><span></span><span></span>
@@ -136,7 +136,7 @@
             <h1>Configure AI agents for <span class="accent">any</span> pharma GMP workflow.</h1>
             <p class="hero__sub">ReveonAI is the GMP-native platform where Quality and Manufacturing teams build and run human-in-the-loop AI agents for any use case — deviations, audits, batch review, SOPs, regulatory response — with an expert in control of every output.</p>
             <div class="hero__cta">
-              <a href="#demo" class="btn btn--primary btn--lg">Book a demo <svg class="arr" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+              <a href="#contactForm" class="btn btn--primary btn--lg" data-cta="hero">Book a demo <svg class="arr" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
               <a href="#how" class="btn btn--ghost btn--lg">See how it works</a>
             </div>
             <div class="hero__selector">
@@ -653,12 +653,12 @@
               </div>
             </div>
             <div class="cf__field">
-              <label for="cf-subject">Subject<span aria-hidden="true">*</span></label>
-              <input type="text" id="cf-subject" name="subject" placeholder="e.g. Demo request — deviation backlog" required />
+              <label for="cf-subject">Subject <span class="cf__opt">(optional)</span></label>
+              <input type="text" id="cf-subject" name="subject" autocomplete="organization" placeholder="e.g. Demo request — deviation backlog" />
             </div>
             <div class="cf__field">
               <label for="cf-message">Message<span aria-hidden="true">*</span></label>
-              <textarea id="cf-message" name="message" rows="4" placeholder="Tell us about your workflow, team, or timeline…" required></textarea>
+              <textarea id="cf-message" name="message" rows="4" placeholder="A line about your workflow or biggest bottleneck is enough." required></textarea>
             </div>
             <button type="submit" class="btn btn--primary btn--lg cf__submit">Send message <svg class="arr" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
             <p class="cf__status" id="cfStatus" role="status" aria-live="polite"></p>

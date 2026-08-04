@@ -49,7 +49,7 @@
 
 /* ---------- Reset ---------- */
 *, *::before, *::after { box-sizing: border-box; }
-html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; overflow-x: hidden; }
 body {
   margin: 0;
   font-family: var(--font-body);
@@ -502,6 +502,11 @@ section { padding-block: var(--section-y); position: relative; }
 }
 .announce:hover .announce__link { text-decoration: underline; }
 .announce__link { color: var(--teal-bright); font-weight: 600; white-space: nowrap; }
+@media (max-width: 760px) {
+  .announce { font-size: .82rem; padding: 8px 14px; line-height: 1.35; }
+  .announce .announce__full { display: none; }
+}
+@media (min-width: 761px) { .announce .announce__short { display: none; } }
 
 /* ============================================================
    Contact section & form
@@ -522,9 +527,10 @@ section { padding-block: var(--section-y); position: relative; }
 .cf__field { margin-bottom: 16px; }
 .cf__field label { display: block; font-size: .84rem; font-weight: 600; color: rgba(255,255,255,.75); margin-bottom: 7px; }
 .cf__field label span { color: var(--teal-bright); margin-left: 2px; }
+.cf__field label .cf__opt { color: rgba(255,255,255,.45); font-weight: 500; }
 .cf__field input, .cf__field textarea {
   width: 100%; background: rgba(0,21,46,.55); border: 1px solid var(--line-dark); border-radius: 10px;
-  padding: 12px 14px; color: #fff; font-family: var(--font-body); font-size: .98rem;
+  padding: 13px 14px; color: #fff; font-family: var(--font-body); font-size: 16px;
   transition: border-color .2s, box-shadow .2s; resize: vertical;
 }
 .cf__field input::placeholder, .cf__field textarea::placeholder { color: rgba(255,255,255,.35); }
@@ -538,8 +544,13 @@ section { padding-block: var(--section-y); position: relative; }
 .cf__status.ok { color: #4fd97a; }
 .cf__status.err { color: #ff9c8a; }
 @media (max-width: 900px) {
-  .contact { grid-template-columns: 1fr; }
+  .contact { grid-template-columns: 1fr; gap: 28px; }
   .cf__row { grid-template-columns: 1fr; }
+  /* keep the form within easy reach of the section top on phones */
+  .contact__info .lead { font-size: 1.05rem; }
+  .contact__channels { margin-top: 20px; gap: 12px; }
+  .contact__info > p:last-child { display: none; }
+  .contact__form { padding: 26px 20px; scroll-margin-top: 84px; }
 }
 
 /* ============================================================
@@ -595,7 +606,12 @@ section { padding-block: var(--section-y); position: relative; }
 }
 @media (max-width: 760px) {
   .nav__menu, .nav__login { display: none; }
-  .nav__toggle { display: block; }
+  .nav__toggle { display: block; margin-left: 4px; }
+  .nav { gap: 12px; }
+  .brand__icon { height: 34px; }
+  .brand__word { font-size: 1.25rem; }
+  /* nav CTA must stay compact — full-width buttons below would break the header */
+  .nav__right .btn { width: auto; padding: 11px 16px; font-size: .9rem; }
   .nav.open .nav__menu {
     display: flex; flex-direction: column; position: absolute; top: 76px; left: 0; right: 0;
     background: var(--navy-900); padding: 16px var(--gutter) 28px; gap: 4px; border-bottom: 1px solid var(--line-dark);
@@ -604,7 +620,7 @@ section { padding-block: var(--section-y); position: relative; }
   .prod-grid, .prod-grid--4, .steps, .stats, .sec-grid, .insight-grid { grid-template-columns: 1fr; }
   .hero__cta { flex-direction: column; align-items: stretch; }
   .hero__cta .btn { justify-content: center; }
-  .btn { width: 100%; justify-content: center; }
+  main .btn, .footer .btn { width: 100%; justify-content: center; }
   .hero__cta, .final-cta .hero__cta { }
   .quote-card { padding: 30px 26px; }
 }
