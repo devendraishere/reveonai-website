@@ -104,16 +104,24 @@
           sitename: "ReveonAI"
         })
       }).then(function (res) {
-        if (!res.ok) throw new Error("send failed");
+        if (!res.ok) throw new Error("HTTP " + res.status);
         status.textContent = "Message sent — thank you. We'll get back to you soon.";
         status.className = "cf__status ok";
         if (typeof gtag === "function") {
           gtag("event", "generate_lead", { form_name: "contact", page_location: location.href });
         }
         form.reset();
-      }).catch(function () {
+      }).catch(function (err) {
         status.textContent = "Something went wrong. Please email contact@reveonai.com directly.";
         status.className = "cf__status err";
+        // A failed send is a lost lead we would otherwise never hear about.
+        if (typeof gtag === "function") {
+          gtag("event", "form_submit_error", {
+            form_name: "contact",
+            reason: (err && err.message) || "unknown",
+            page_location: location.href
+          });
+        }
       }).finally(function () {
         submitBtn.disabled = false;
         submitBtn.innerHTML = btnHtml;
@@ -139,11 +147,21 @@
       if (!a) return;
       var href = a.getAttribute("href") || "";
       if (a.dataset.cta) {
-        gtag("event", "cta_click", { cta_location: a.dataset.cta, link_text: a.innerText.trim().slice(0, 60) });
+        gtag("event", "cta_click", { cta_location: a.dataset.cta, link_text: a.innerText.trim().slice(0, 60), link_url: href });
       } else if (href.indexOf("mailto:") === 0) {
         gtag("event", "contact_click", { method: "email" });
       } else if (href.indexOf("tel:") === 0) {
         gtag("event", "contact_click", { method: "phone" });
+      } else if (a.classList.contains("btn")) {
+        // Buttons without an explicit data-cta: infer the section they sit in,
+        // so any new page or section is measured without needing to be tagged.
+        var sec = a.closest("section, footer, header");
+        var where = (sec && (sec.id || (sec.className || "").split(" ")[0])) || "unknown";
+        gtag("event", "cta_click", {
+          cta_location: where,
+          link_text: a.innerText.trim().slice(0, 60) || "(icon)",
+          link_url: href
+        });
       }
     });
   })();
