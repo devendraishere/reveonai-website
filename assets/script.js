@@ -110,6 +110,13 @@
         if (typeof gtag === "function") {
           gtag("event", "generate_lead", { form_name: "contact", page_location: location.href });
         }
+        // LinkedIn conversion — lets Campaign Manager attribute this lead
+        // back to the ad that brought them. No-op until configured in
+        // assets/tracking.js.
+        var lc = window.REVEON_TRACKING && window.REVEON_TRACKING.LINKEDIN_LEAD_CONVERSION_ID;
+        if (lc && typeof window.lintrk === "function") {
+          window.lintrk("track", { conversion_id: lc });
+        }
         form.reset();
       }).catch(function (err) {
         status.textContent = "Something went wrong. Please email contact@reveonai.com directly.";
