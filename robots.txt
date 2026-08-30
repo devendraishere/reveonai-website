@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.reveonai.com/sitemap.xml
+# This domain has moved to https://www.reveon.ai
